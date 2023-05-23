@@ -1,0 +1,37 @@
+.btn-login{
+    background-color: rgb(11, 161, 111)!important;
+
+}
+.img-body{
+   width: 125px;
+   height: 125px;
+  
+}
+
+.error{
+    color: red;
+}
+
+.side-navbar {
+    width: 180px;
+    height: 100%;
+    position: fixed;
+    margin-left: -300px;
+    background-color: #100901;
+    transition: 0.5s;
+  }
+  .nav-link:active,
+  .nav-link:focus,
+  .nav-link:hover {
+    background-color: #ffffff26;
+  }
+  .my-container {
+    transition: 0.4s;
+  }
+  .active-nav {
+    margin-left: 0;
+  }
+  /* for main section */
+  .active-cont {
+    margin-left: 180px;
+  }
