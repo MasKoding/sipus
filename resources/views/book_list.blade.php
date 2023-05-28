@@ -2,7 +2,6 @@
 
 @section('title','Book List')
 
-@stop
 @section('content_header')
     <h1>Book List</h1>
 @stop
@@ -69,7 +68,7 @@
                                                 <a href="{{ route('book.edit',$b->book_id)}}" class="btn btn-primary">
                                                     <i class="fas fa-edit"></i>
                                                     Edit</a>
-                                                <form action="{{ route('book.delete',$b->book_id)}}" method="POST">
+                                                <form action="{{ route('book.destroy',$b->book_id)}}" method="POST">
                                                     @csrf
                                                     @method('DELETE')
                                                     <button type="submit" class="btn btn-danger">

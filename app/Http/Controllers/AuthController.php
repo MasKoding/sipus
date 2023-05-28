@@ -76,7 +76,7 @@ class AuthController extends Controller
              ->withErrors($validator)
              ->withInput();
         }
-        $request['level']='user';
+        $request['level']='admin';
         $request['password'] = bcrypt($request->password);
 
         User::create($request->all());

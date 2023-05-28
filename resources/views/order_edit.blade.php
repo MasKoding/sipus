@@ -1,5 +1,6 @@
 @extends('adminlte::page')
 
+
 @section('css')
 <style>
       .imgUpload {
@@ -8,6 +9,13 @@
                 min-width: 300px;
                 min-height: 300px;
             }
+
+        .select2-container{
+        width: 1120.74px;
+        border: 1px solid #ccc!important;
+        padding: 5px;
+        
+    }
 </style>
 @stop
 @section('title', 'New Book')

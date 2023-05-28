@@ -38,6 +38,12 @@
                                 </div>
                             </div>
                             <div class="row mb-3">
+                                <label for="inputEmail3" class="col-sm-2 col-form-label">Stock</label>
+                                <div class="col-sm-10">
+                                    <input type="number" class="form-control" name="stock" id="stock" value="{{ $book->stock}}">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
                                 <label for="inputEmail3" class="col-sm-2 col-form-label">Image</label>
                                 <div class="col-sm-10">
                                     <img src="

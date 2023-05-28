@@ -93,7 +93,7 @@ class CustomerController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function delete($id)
+    public function destroy($id)
     {
         //
         Customer::where('customer_id',$id)->delete();

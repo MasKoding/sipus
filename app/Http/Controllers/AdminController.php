@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 class AdminController extends Controller
 {
     //
-    public function index(){
+    public function dashboard(){
         $totalCustomer = Customer::all()->count();
         $totalBook = Book::all()->count();
         $totalOrder = Order::all()->count();

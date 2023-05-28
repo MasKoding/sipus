@@ -59,7 +59,7 @@
                                                 <a href="{{ route('customer.edit',$c->customer_id)}}" class="btn btn-primary">
                                                     <i class="fas fa-edit"></i>
                                                     Edit</a>
-                                                <form action="{{ route('customer.delete',$c->customer_id)}}" method="POST">
+                                                <form action="{{ route('customer.destroy',$c->customer_id)}}" method="POST">
                                                     @csrf
                                                     @method('DELETE')
                                                     <button type="submit" class="btn btn-danger">
