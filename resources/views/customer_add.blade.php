@@ -18,13 +18,13 @@
                             <div class="row mb-3">
                                 <label for="inputEmail3" class="col-sm-2 col-form-label">FullName</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="fullname" id="fullname">
+                                    <input type="text" class="form-control" name="fullname" id="fullname" required>
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
                                 <div class="col-sm-10">
-                                    <input type="email" class="form-control" name="email" id="email">
+                                    <input type="email" class="form-control" name="email" id="email" required>
                                 </div>
                             </div>
                            
@@ -52,13 +52,13 @@
                             <div class="row mb-3">
                                 <label for="inputEmail3" class="col-sm-2 col-form-label">Phone</label>
                                 <div class="col-sm-10">
-                                    <input type="number" class="form-control" name="phone" id="phone">
+                                    <input type="number" class="form-control" name="phone" id="phone" required>
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <label for="inputEmail3" class="col-sm-2 col-form-label">Address</label>
                                 <div class="col-sm-10">
-                                    <textarea  class="form-control" name="address" id="address"></textarea>
+                                    <textarea  class="form-control" name="address" id="address" required></textarea>
                                 </div>
                             </div>
                         
