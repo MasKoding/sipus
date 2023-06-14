@@ -1,9 +1,8 @@
 @extends('adminlte::page')
 
-@section('title','Order List')
-
+@section('title','Customer List')
 @section('content_header')
-    <h1>Order List</h1>
+    <h1>ATK List</h1>
 @stop
 
 @section('content')
@@ -28,7 +27,7 @@
                             @endif
 
                             <div class="float-right">
-                                <a href="{{ route('order.create')}}" class="btn btn-success">
+                                <a href="{{ route('atk.create')}}" class="btn btn-success">
                                     <i class="fas fa-plus"></i>
                                     Create</a>
 
@@ -37,37 +36,30 @@
                                 <thead>
                                   <tr>
                                     <th scope="col">#</th>
-                                    <th scope="col">Order Id</th>
-                                    <th scope="col">Order Date</th>
-                                    <th scope="col">Customer Email</th>
-                                    <th scope="col" width="300px">Book</th>
-                                    <th scope="col">Quantiy</th>
-                                    <th scope="col">Amount</th>
-                                    <th scope="col">Payment Status</th>       
-                                    <th scope="col" width="500px" class="text-center">Action</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Image</th>
+                                    <th scope="col">Stock</th>
+                                    <th scope="col">Price</th>
+                                    <th scope="col" width="350px">Action</th>
                                   </tr>
                                 </thead>
                                 <tbody>
                                 
-                                    @foreach ($order as $o)
+                                    @foreach ($atk as $c)
                                     <tr>
-                                        <th >{{ ++$i }}</th>
-                                        <td>{{ $o->order_id }}</td>
-                                        <td>{{ $o->order_date }}</td>
-                                        <td>{{ $o->email }}</td>
-                                        <td>{{ $o->book_title }}</td>
-                                        <td>{{ $o->quantity }}</td>
-                                        <td>{{ $o->amount }}</td>
-                                        <td>{{ $o->payment_status }}</td>
-                                      
-                                       
+                                        <th scope="row">{{ ++$i }}</th>
+                                        <td>{{ $c->product_name }}</td>
+                                        <td><img src="{{ asset('images/'.$c->product_image)}}" alt=""
+                                            width="100px"
+                                            ></td>
+                                       <td>{{ $c->product_stock }}</td>
+                                        <td>{{ $c->product_price }}</td>
                                         <td>
                                             <div class="d-flex justify-content-around">
-                                                
-                                                <a href="{{ route('order.edit',$o->order_id)}}" class="btn btn-primary">
+                                                <a href="{{ route('atk.edit',$c->id)}}" class="btn btn-primary">
                                                     <i class="fas fa-edit"></i>
                                                     Edit</a>
-                                                <form action="{{ route('order.destroy',$o->order_id)}}" method="POST">
+                                                <form action="{{ route('atk.destroy',$c->id)}}" method="POST">
                                                     @csrf
                                                     @method('DELETE')
                                                     <button type="submit" class="btn btn-danger">
@@ -75,8 +67,7 @@
                                                         Delete</button>
                                                 </form>
                                             </div>
-                                          
-
+                                            
                                         </td>
                                       </tr>
                                     @endforeach
@@ -85,7 +76,7 @@
                                 </tbody>
                               </table>
 
-                              {{ $order->links()}}
+                              {{ $atk->links()}}
                         </div>
                     </div>
                 </div>

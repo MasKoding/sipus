@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Book;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class BookController extends Controller
 {
@@ -13,7 +14,12 @@ class BookController extends Controller
     public function index()
     {
         //
-        $book =  Book::latest()->paginate(5);
+
+         $book= DB::table('book')
+                    ->join('order','order.book_id','=','book.book_id')
+                     ->selectRaw('book.*,sum(order.quantity) as jumlahorder')
+                     ->groupBy('order.book_id')
+                     ->paginate(5);
 
         return view('book_list',compact('book'))
         ->with('i',(request()->input('page',1)-1)*5);

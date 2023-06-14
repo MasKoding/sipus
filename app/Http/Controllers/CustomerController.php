@@ -14,7 +14,7 @@ class CustomerController extends Controller
     public function index()
     {
         //
-        $customer =  Customer::latest()->paginate(5);
+        $customer =  Customer::paginate(5);
 
         return view('customer_list',compact('customer'))
         ->with('i',(request()->input('page',1)-1)*5);

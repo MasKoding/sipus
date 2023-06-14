@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ATKController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\CustomerController;
@@ -69,6 +70,7 @@ Route::group(['prefix'=>'admin','middleware' => ['auth']], function () {
    
    // order
  Route::resource('order',OrderController::class);
+ Route::resource('atk',ATKController::class);
    
 
 });

@@ -10,7 +10,7 @@
             }
 
         .select2-container{
-        width: 1120.74px;
+        width: 1120.74px!important;
         border: 1px solid #ccc!important;
         padding: 5px;
         
@@ -166,6 +166,9 @@
             }
         })
     });
+
+
+    
    $('#book').change(function (){
     var book  = $(this).val();
         $.ajax({

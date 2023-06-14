@@ -39,6 +39,13 @@
                                           <span class="error">* {{ $errors->first('password') }}</span>
                                         @endif
                                     </div>
+                                    <div class="form-group">
+                                        <label class="small mb-1" for="inputPassword">Password Confirm</label>
+                                        <input class="form-control py-4" id="inputPassword" type="password" name="password_confirm" placeholder="Masukkan Password" />
+                                        @if ($errors->has('password_confirm'))
+                                          <span class="error">* {{ $errors->first('password_confirm') }}</span>
+                                        @endif
+                                    </div>
                                     <div class="form-group mt-4 mb-0">
                                         <button class="btn btn-primary btn-block" type="submit">Daftar!</button>
                                     </div>

@@ -15,7 +15,7 @@ class OrderController extends Controller
         //
         $order =  Order::join('customer','order.customer_id','=','customer.customer_id')
                 ->join('book','order.book_id','=','book.book_id')
-                ->select([ 'order.order_id','order.order_date','customer.email','book.title','order.quantity','order.amount','order.payment_status'])->paginate(5);
+                ->select([ 'order.order_id','order.order_date','customer.email','book.title as book_title','order.quantity','order.amount','order.payment_status'])->paginate(5);
      
 
 

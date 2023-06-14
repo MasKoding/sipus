@@ -44,6 +44,7 @@
                                     <th scope="col">Author</th>
                                     <th scope="col">Stock</th>
                                     <th scope="col">Price</th>
+                                    <th scope="col">Jumlah Order</th>
                                     <th scope="col" width="350px" class="text-center">Action</th>
                                   </tr>
                                 </thead>
@@ -61,6 +62,8 @@
                                         <td>{{ $b->author }}</td>
                                         <td>{{ $b->stock }}</td>
                                         <td>{{ $b->price }}</td>
+                                        <td>{{ $b->jumlahorder }}</td>
+
                                       
                                        
                                         <td>
